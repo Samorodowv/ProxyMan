@@ -61,6 +61,8 @@ function _do_it_for_all() {
                    ;;
                 9) sudo -E bash "docker.sh" "$what_to_do"
                    ;;
+                10) sudo -E bash "snap.sh" "$what_to_do"
+                   ;;
                 *) ;;
             esac
         done
@@ -152,6 +154,7 @@ function prompt_for_proxy_targets() {
     echo "|${bold}${red} 7 ${normal}| Dropbox"
     echo "|${bold}${red} 8 ${normal}| Git"
     echo "|${bold}${red} 9 ${normal}| Docker"
+    echo "|${bold}${red} 10 ${normal}| Snap"
     echo
     echo "Separate multiple choices with space"
     echo -ne "\e[5m ? \e[0m" ; read targets
